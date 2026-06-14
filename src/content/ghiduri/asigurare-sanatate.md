@@ -4,6 +4,10 @@ slug: "asigurare-sanatate"
 category: "Sănătate"
 summary: "Informații esențiale despre asigurarea medicală obligatorie în Olanda, riscul propriu (eigen risico) și cum poți obține subvenția lunară (Zorgtoeslag)."
 date: "2026-06-13"
+duration: "4 luni limită"
+cost: "€140 - €165 / lună"
+authority: "CAK / Asigurători"
+difficulty: "Ușor"
 ---
 
 În Olanda, sistemul de sănătate se bazează pe asigurări private obligatorii. Toți cei care locuiesc sau lucrează legal în Olanda sunt obligați prin lege să încheie o asigurare de sănătate de bază (**basisverzekering**) în termen de **4 luni** de la înregistrarea la primărie sau de la începerea contractului de muncă.

@@ -4,6 +4,10 @@ slug: "inschrijving-primarie-bsn"
 category: "Administrativ"
 summary: "Ghid detaliat despre cum să te înregistrezi în evidența populației (BRP) din Olanda și cum să obții numărul personal de securitate socială (BSN)."
 date: "2026-06-13"
+duration: "30-45 minute"
+cost: "Gratuit"
+authority: "Gemeente (Primărie)"
+difficulty: "Mediu"
 ---
 
 Dacă te muți în Olanda pentru a munci, studia sau locui, unul dintre primele și cele mai importante lucruri pe care trebuie să le faci este să te înregistrezi la primăria locală (**Gemeente**). Această înregistrare îți va oferi numărul **BSN (Burgerservicenummer)**.

@@ -9,6 +9,10 @@ export interface ArticleMetadata {
   category: string;
   summary: string;
   date: string;
+  duration?: string;
+  cost?: string;
+  authority?: string;
+  difficulty?: string;
 }
 
 export interface Article extends ArticleMetadata {
@@ -72,6 +76,10 @@ export function getArticleBySlug(slug: string): Article | null {
     category: data.category || 'General',
     summary: data.summary || '',
     date: data.date || '',
+    duration: data.duration || '',
+    cost: data.cost || '',
+    authority: data.authority || '',
+    difficulty: data.difficulty || '',
     contentHtml,
     contentRaw: content,
   };
@@ -95,6 +103,10 @@ export function getAllArticlesWithContent(): Article[] {
         category: data.category || 'General',
         summary: data.summary || '',
         date: data.date || '',
+        duration: data.duration || '',
+        cost: data.cost || '',
+        authority: data.authority || '',
+        difficulty: data.difficulty || '',
         contentHtml,
         contentRaw: content,
       };

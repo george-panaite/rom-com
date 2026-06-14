@@ -4,6 +4,10 @@ slug: "inregistrare-kvk-zzp"
 category: "Business"
 summary: "Ghid complet pentru românii care vor să lucreze pe cont propriu (ZZP) în Olanda. Cum faci programarea la KVK, taxe, TVA și obligații contabile."
 date: "2026-06-13"
+duration: "1-2 săptămâni"
+cost: "€80.10 taxă unică"
+authority: "KVK (Camera de Comerț)"
+difficulty: "Mediu"
 ---
 
 Dacă dorești să lucrezi pe cont propriu în Olanda, de exemplu ca zugrav, electrician, programator, livrator sau cosmeticiană, va trebui să te înregistrezi ca întreprindere individuală. Aceasta este cunoscută în Olanda sub denumirea de **Eenmanszaak** (firmă cu un singur proprietar), iar statutul tău va fi de **ZZP** (Zelfstandige Zonder Personeel - lucrător independent fără angajați).
