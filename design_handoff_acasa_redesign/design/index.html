@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ghid Olanda — comunitatea ta în Olanda</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header>
+  <div class="wrap">
+    <div class="logo" data-nav="home"><span class="mark">G</span> Ghid Olanda</div>
+    <nav class="menu">
+      <a data-nav="home" class="active">Ghiduri</a>
+      <a data-scroll="comunitate">Comunitate</a>
+      <a data-nav="ana" class="btn btn-poppy">Întreabă pe Ana</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ============ HOME ============ -->
+<main id="view-home">
+
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="reveal">
+        <span class="eyebrow">Comunitatea ta în Olanda</span>
+        <h1>Aici nu ești <span class="u">singur</span> în Olanda.</h1>
+        <p class="lead">Ghiduri prietenoase despre acte și proceduri, plus oameni care au trecut prin aceleași lucruri. Totul în limba română.</p>
+        <div class="hero-cta">
+          <button class="btn btn-poppy" data-nav="ana">Întreabă pe Ana
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+          <button class="btn btn-ghost" data-scroll="ghiduri">Vezi ghidurile</button>
+          <div class="helped">
+            <span class="dots"><span style="background:var(--pine)">M</span><span style="background:var(--poppy)">I</span><span style="background:var(--honey)">D</span></span>
+            ajutăm zilnic
+          </div>
+        </div>
+      </div>
+      <div class="collage reveal">
+        <span class="sticker">în română</span>
+        <div class="ph ph1"><span class="lbl">Foto: piață locală</span></div>
+        <div class="ph ph2"><span class="lbl">Foto: comunitate</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section wrap" id="ghiduri">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Ghidurile esențiale</span>
+      <h2>Pașii prin care trece oricine</h2>
+      <p>Explicate simplu, cu surse oficiale. Alege ce te interesează acum.</p>
+    </div>
+    <div class="filters reveal" id="filters"></div>
+    <div class="guides reveal" id="guides"></div>
+  </section>
+
+  <section class="wrap">
+    <div class="ana-band reveal" data-nav="ana">
+      <div class="inner">
+        <div class="ana-face">A</div>
+        <div class="txt">
+          <span class="eyebrow">Asistenta ta</span>
+          <h3>Salut, sunt Ana.</h3>
+          <p>Întreabă-mă orice despre actele și pașii din Olanda. Îți răspund pe loc, în limba română, gratuit.</p>
+        </div>
+        <button class="btn btn-ink">Începe o conversație
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+      </div>
+    </div>
+  </section>
+
+  <section class="section wrap community" id="comunitate">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Ce urmează</span>
+      <h2>Mai mult decât un ghid</h2>
+      <p>Ghidul este doar începutul. Construim locul unde românii din Olanda se ajută între ei.</p>
+    </div>
+    <div class="pillars">
+      <div class="pill reveal"><div class="pn">01</div><h4>Ghiduri și Ana</h4><p>Proceduri traduse și o asistentă care răspunde la întrebări, gratuit.</p><span class="badge live">Disponibil acum</span></div>
+      <div class="pill reveal"><div class="pn">02</div><h4>Marktplaats</h4><p>Muncă, meseriași, transport și locuințe, cu recenzii reale.</p><span class="badge soon">În curând</span></div>
+      <div class="pill reveal"><div class="pn">03</div><h4>Comunitate</h4><p>Profiluri, recenzii și răspunsuri din experiența celor de aici.</p><span class="badge soon">În curând</span></div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ ARTICLE (rendered by app.js) ============ -->
+<main id="view-article" hidden></main>
+
+<!-- ============ ANA CHAT (rendered by app.js) ============ -->
+<main id="view-ana" hidden></main>
+
+<!-- ============ FOOTER ============ -->
+<footer id="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="logo" data-nav="home"><span class="mark">G</span> Ghid Olanda</div>
+        <p>Informații clare despre viața în Olanda, în limba română. Un proiect independent pentru comunitate.</p>
+      </div>
+      <div class="foot-col"><h5>Platformă</h5><a data-nav="home">Ghiduri</a><a data-nav="ana">Asistenta Ana</a><a data-scroll="comunitate">Comunitate</a></div>
+      <div class="foot-col"><h5>Despre</h5><a>Cine suntem</a><a>Surse</a><a>Contact</a></div>
+    </div>
+    <div class="foot-bottom"><span>© 2026 Ghid Olanda</span><span>Informații neoficiale. Ana respectă EU AI Act.</span></div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
