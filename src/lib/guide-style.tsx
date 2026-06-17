@@ -26,7 +26,7 @@ export function getCategoryStyle(category: string): CategoryStyle {
       return {
         key: "sanatate",
         Icon: HeartPulse,
-        tint: "bg-poppy-wash text-poppy",
+        tint: "bg-poppy-wash text-poppy-d",
       };
     case "business":
       return { key: "business", Icon: Store, tint: "bg-honey-wash text-honey-d" };

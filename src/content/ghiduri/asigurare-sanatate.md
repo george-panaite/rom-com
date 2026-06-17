@@ -8,6 +8,13 @@ duration: "4 luni limită"
 cost: "€140 - €165 / lună"
 authority: "CAK / Asigurători"
 difficulty: "Ușor"
+sources:
+  - label: "Rijksoverheid — Zorgverzekering"
+    url: "https://www.rijksoverheid.nl/onderwerpen/zorgverzekering"
+  - label: "Belastingdienst — Zorgtoeslag"
+    url: "https://www.belastingdienst.nl/zorgtoeslag"
+  - label: "Het CAK — asigurare obligatorie"
+    url: "https://www.hetcak.nl"
 ---
 
 În Olanda, sistemul de sănătate se bazează pe asigurări private obligatorii. Toți cei care locuiesc sau lucrează legal în Olanda sunt obligați prin lege să încheie o asigurare de sănătate de bază (**basisverzekering**) în termen de **4 luni** de la înregistrarea la primărie sau de la începerea contractului de muncă.

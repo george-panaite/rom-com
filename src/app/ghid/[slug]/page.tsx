@@ -3,7 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getArticleBySlug, getAllArticles } from "@/lib/kennisbank";
 import { getCategoryStyle } from "@/lib/guide-style";
-import { ArrowLeft, ArrowRight, FileText } from "@/components/icons";
+import { ArrowLeft, ArrowRight, ExternalLink, FileText } from "@/components/icons";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -73,8 +73,23 @@ export default async function ArticlePage({ params }: PageProps) {
     { l: "Dificultate", v: article.difficulty },
   ].filter((c) => c.v);
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    headline: article.title,
+    description: article.summary,
+    inLanguage: "ro-RO",
+    ...(article.date ? { datePublished: article.date, dateModified: article.date } : {}),
+    author: { "@type": "Organization", name: "Ghid Olanda" },
+    publisher: { "@type": "Organization", name: "Ghid Olanda" },
+  };
+
   return (
     <div className="pt-10">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <div className="mx-auto max-w-[1180px] px-5 sm:px-7">
         <Link
           href="/"
@@ -131,6 +146,27 @@ export default async function ArticlePage({ params }: PageProps) {
           className="prose-acasa"
           dangerouslySetInnerHTML={{ __html: bodyHtml }}
         />
+
+        {/* Official sources */}
+        {article.sources && article.sources.length > 0 && (
+          <section className="mx-auto mt-10 max-w-[730px] border-t border-line2 pt-6">
+            <div className="mb-3.5 text-xs font-bold uppercase tracking-[0.06em] text-faint">
+              Surse oficiale
+            </div>
+            {article.sources.map((s) => (
+              <a
+                key={s.url}
+                href={s.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center gap-[11px] border-b border-line py-2.5 text-[15px] text-soft transition-[color,gap] duration-200 last:border-b-0 hover:gap-[15px] hover:text-poppy-d"
+              >
+                <ExternalLink className="h-4 w-4 flex-none text-pine" />
+                {s.label}
+              </a>
+            ))}
+          </section>
+        )}
 
         {/* Ana CTA */}
         <Link

@@ -8,6 +8,13 @@ duration: "30-45 minute"
 cost: "Gratuit"
 authority: "Gemeente (Primărie)"
 difficulty: "Mediu"
+sources:
+  - label: "Rijksoverheid — Burgerservicenummer (BSN)"
+    url: "https://www.rijksoverheid.nl/onderwerpen/persoonsgegevens/burgerservicenummer-bsn"
+  - label: "RvIG — Registratie Niet-Ingezetenen (RNI)"
+    url: "https://www.rvig.nl/rni"
+  - label: "DigiD — creează-ți identitatea digitală"
+    url: "https://www.digid.nl"
 ---
 
 Dacă te muți în Olanda pentru a munci, studia sau locui, unul dintre primele și cele mai importante lucruri pe care trebuie să le faci este să te înregistrezi la primăria locală (**Gemeente**). Această înregistrare îți va oferi numărul **BSN (Burgerservicenummer)**.

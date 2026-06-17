@@ -46,9 +46,22 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const orgLd = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Ghid Olanda",
+    description:
+      "Ghiduri în limba română despre actele și procedurile administrative din Olanda, plus asistenta AI Ana.",
+    inLanguage: "ro-RO",
+  };
+
   return (
     <html lang="ro" className={`${bricolage.variable} ${hanken.variable}`}>
       <body className="flex min-h-screen flex-col bg-paper font-body text-ink">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(orgLd) }}
+        />
         <SiteHeader />
         <main className="flex flex-grow flex-col">{children}</main>
         <SiteFooter />

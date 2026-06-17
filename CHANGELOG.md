@@ -1,5 +1,45 @@
 # Changelog
 
+## 2026-06-17 — Trust, accessibility, SEO & copy pass
+
+Acted on a senior UX/UI design critique of the live site, judged against the
+platform concept (trust-first, SEO as the wedge, Romanian newcomers,
+mobile-first). Also ran a copywriting pass over the content.
+
+### Trust
+- Replaced the two "FOTO:" gradient placeholders in the hero with meaningful
+  product panels: a guides checklist ("Pas cu pas, în limba ta.") and an Ana
+  chat preview — showcasing the two live pillars instead of empty boxes.
+- Re-added official **sources** to all three guides (frontmatter `sources` +
+  rendered "Surse oficiale" list): Rijksoverheid, RvIG, DigiD, Belastingdienst,
+  CAK, KVK. Sources are a core trust signal in the concept.
+- Removed fabricated social proof (M/I/D avatars + "ajutăm zilnic") in favour of
+  honest value chips: *Gratuit · În română · Surse oficiale*.
+
+### Accessibility (now WCAG AA)
+- Darkened text tokens to pass contrast: `--color-poppy-d` #C13E20 → **#B83A1C**
+  (white-on-button 5.7:1, 4.7:1+ on washes), `--color-faint` #9C8B79 → **#7E6E5C**
+  (4.8:1), `--color-honey-d` #C9871D → **#8C5E12** (4.9:1 on honey-wash).
+- `sănătate` category text now uses poppy-d; eyebrow uses poppy-d.
+- Global `:focus-visible` ring + a guaranteed focus ring on the chat input
+  (`focus-within` on the form).
+
+### SEO
+- Added JSON-LD structured data: `TechArticle` on each guide + `Organization`
+  sitewide.
+- Replaced the auto-numbered article `h2` (which implied a false step order) with
+  a poppy section bar; true sequence stays in the numbered `<ol>` lists.
+
+### Mobile-first
+- Restored cost + tap affordance on guide rows on mobile (a `cost · duration`
+  line with a chevron) without crowding the title.
+
+### Copywriting
+- Hero lead rewritten to be honest and functional (leads with the live guides +
+  Ana, no longer implies a community that isn't live yet).
+- Chat errors now render as a distinct warning callout ("Ceva n-a mers bine",
+  what happened + how to fix) instead of masquerading as an answer from Ana.
+
 ## 2026-06-17 — "Acasă" redesign (warm, community-first direction)
 
 Complete visual redesign of the Ghid Olanda platform, recreating the **Acasă**

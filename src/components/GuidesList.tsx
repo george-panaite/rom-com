@@ -65,6 +65,19 @@ export default function GuidesList({ articles }: GuidesListProps) {
                   {article.title}
                 </h3>
                 <p className="max-w-[60ch] text-[14.5px] text-soft">{article.summary}</p>
+
+                {/* Mobile-only: cost + tap affordance (the desktop column is hidden < 881px) */}
+                <div className="mt-3 flex items-center justify-between border-t border-line pt-3 min-[881px]:hidden">
+                  <span className="font-display text-[15px] font-bold text-ink">
+                    {article.cost}
+                    {article.duration && (
+                      <span className="ml-2 font-body text-xs font-semibold text-faint">
+                        {article.duration}
+                      </span>
+                    )}
+                  </span>
+                  <ArrowRight className="h-[18px] w-[18px] text-poppy-d" />
+                </div>
               </div>
 
               <div className="flex flex-none items-center gap-[22px] max-[880px]:hidden">

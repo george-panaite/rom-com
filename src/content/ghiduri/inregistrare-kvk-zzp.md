@@ -8,6 +8,13 @@ duration: "1-2 săptămâni"
 cost: "€80.10 taxă unică"
 authority: "KVK (Camera de Comerț)"
 difficulty: "Mediu"
+sources:
+  - label: "KVK — Inschrijven (înregistrare)"
+    url: "https://www.kvk.nl/inschrijven/"
+  - label: "KVK — Coduri de activitate (SBI)"
+    url: "https://www.kvk.nl/sbi/"
+  - label: "Belastingdienst — btw pentru antreprenori"
+    url: "https://www.belastingdienst.nl/zakelijk/btw"
 ---
 
 Dacă dorești să lucrezi pe cont propriu în Olanda, de exemplu ca zugrav, electrician, programator, livrator sau cosmeticiană, va trebui să te înregistrezi ca întreprindere individuală. Aceasta este cunoscută în Olanda sub denumirea de **Eenmanszaak** (firmă cu un singur proprietar), iar statutul tău va fi de **ZZP** (Zelfstandige Zonder Personeel - lucrător independent fără angajați).

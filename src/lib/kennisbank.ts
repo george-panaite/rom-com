@@ -3,6 +3,11 @@ import path from 'path';
 import matter from 'gray-matter';
 import { marked } from 'marked';
 
+export interface Source {
+  label: string;
+  url: string;
+}
+
 export interface ArticleMetadata {
   title: string;
   slug: string;
@@ -13,6 +18,7 @@ export interface ArticleMetadata {
   cost?: string;
   authority?: string;
   difficulty?: string;
+  sources?: Source[];
 }
 
 export interface Article extends ArticleMetadata {
@@ -80,6 +86,7 @@ export function getArticleBySlug(slug: string): Article | null {
     cost: data.cost || '',
     authority: data.authority || '',
     difficulty: data.difficulty || '',
+    sources: Array.isArray(data.sources) ? data.sources : [],
     contentHtml,
     contentRaw: content,
   };

@@ -16,14 +16,14 @@
 
   /* Ink / text */
   --color-ink: #241c16; /* headings, dark buttons, footer bg */
-  --color-soft: #6a5c4e; /* body text */
-  --color-faint: #9c8b79; /* meta / labels */
+  --color-soft: #6a5c4e; /* body text — 5.8:1 on paper */
+  --color-faint: #7e6e5c; /* meta / labels — darkened to 4.5:1+ for AA */
 
   /* Accents */
-  --color-poppy: #e0502e; /* primary action */
-  --color-poppy-d: #c13e20; /* poppy hover / link text */
-  --color-honey: #e9a93c; /* secondary accent */
-  --color-honey-d: #c9871d; /* honey text on light */
+  --color-poppy: #e0502e; /* primary accent (fills, large display) */
+  --color-poppy-d: #b83a1c; /* action text / buttons / links — AA on light + washes */
+  --color-honey: #e9a93c; /* secondary accent (fills, dots, highlight) */
+  --color-honey-d: #8c5e12; /* honey text on light/washes — AA */
   --color-pine: #2c5544; /* tertiary accent */
   --color-pine-d: #1f3e32; /* pine deep */
   --color-pine-tint: #e5eee9; /* pine wash */
@@ -60,12 +60,19 @@ body {
   color: #fff;
 }
 
+/* Visible keyboard focus everywhere (WCAG 2.4.7) */
+:focus-visible {
+  outline: 2px solid var(--color-poppy-d);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
 /* ============ EYEBROW LABEL ============ */
 .eyebrow {
   font-size: 13px;
   font-weight: 700;
   letter-spacing: 0.04em;
-  color: var(--color-poppy);
+  color: var(--color-poppy-d);
   text-transform: uppercase;
   display: inline-flex;
   align-items: center;
@@ -124,12 +131,12 @@ body {
   transform: translateX(4px);
 }
 .btn-poppy {
-  background: var(--color-poppy);
+  background: var(--color-poppy-d);
   color: #fff;
-  box-shadow: 0 10px 24px -10px rgba(224, 80, 46, 0.7);
+  box-shadow: 0 10px 24px -10px rgba(184, 58, 28, 0.7);
 }
 .btn-poppy:hover {
-  background: var(--color-poppy-d);
+  background: #9c3016;
   transform: translateY(-2px);
 }
 .btn-ink {
@@ -225,7 +232,6 @@ body {
   font-size: 18px;
   line-height: 1.72;
   color: var(--color-ink);
-  counter-reset: h2c;
 }
 .prose-acasa > :first-child {
   margin-top: 0;
@@ -241,22 +247,16 @@ body {
   margin: 44px 0 14px;
   line-height: 1.1;
   display: flex;
-  align-items: baseline;
+  align-items: center;
   gap: 14px;
-  counter-increment: h2c;
 }
 .prose-acasa h2::before {
-  content: counter(h2c);
-  font-size: 21px;
-  color: #fff;
+  content: "";
+  width: 6px;
+  height: 26px;
+  border-radius: 3px;
   background: var(--color-poppy);
-  width: 38px;
-  height: 38px;
-  border-radius: 12px;
-  display: inline-grid;
-  place-items: center;
   flex: none;
-  transform: translateY(3px);
 }
 .prose-acasa h3 {
   font-family: var(--font-display);

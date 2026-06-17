@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef, Suspense, useCallback } from "react";
 import { useSearchParams } from "next/navigation";
 import { marked } from "marked";
-import { Send, ArrowRight } from "@/components/icons";
+import { Send, ArrowRight, AlertTriangle } from "@/components/icons";
 
 interface Message {
   role: "user" | "model";
@@ -177,11 +177,12 @@ function ChatInterface() {
               )}
 
               {errorMsg && (
-                <div className="msg ana">
-                  <div className="m-av">A</div>
-                  <div className="bubble">
-                    <p>{errorMsg}</p>
+                <div className="callout warning mx-auto w-full max-w-[480px]" role="alert">
+                  <div className="ct">
+                    <AlertTriangle className="h-[18px] w-[18px]" />
+                    Ceva n-a mers bine
                   </div>
+                  {errorMsg}
                 </div>
               )}
             </>
@@ -190,7 +191,10 @@ function ChatInterface() {
 
         {/* Input */}
         <div className="border-t border-line bg-paper px-5 py-4">
-          <form onSubmit={handleSubmit} className="flex items-center gap-3">
+          <form
+            onSubmit={handleSubmit}
+            className="flex items-center gap-3 rounded-[12px] transition-shadow focus-within:ring-2 focus-within:ring-poppy-d/45"
+          >
             <input
               type="text"
               className="flex-1 border-none bg-transparent px-1 py-2 text-base text-ink outline-none placeholder:text-faint"

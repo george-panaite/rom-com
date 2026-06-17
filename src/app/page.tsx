@@ -2,7 +2,7 @@ import Link from "next/link";
 import { getAllArticles } from "@/lib/kennisbank";
 import GuidesList from "@/components/GuidesList";
 import Reveal from "@/components/Reveal";
-import { ArrowRight } from "@/components/icons";
+import { ArrowRight, Check } from "@/components/icons";
 
 export default function Home() {
   const articles = getAllArticles();
@@ -17,9 +17,9 @@ export default function Home() {
             <h1 className="mt-5 font-display text-[clamp(42px,5.6vw,74px)] font-extrabold leading-[0.98] tracking-[-0.025em]">
               Aici nu ești <span className="hl">singur</span> în Olanda.
             </h1>
-            <p className="mt-6 max-w-[32ch] text-[19px] text-soft">
-              Ghiduri prietenoase despre acte și proceduri, plus oameni care au trecut
-              prin aceleași lucruri. Totul în limba română.
+            <p className="mt-6 max-w-[34ch] text-[19px] text-soft">
+              Ghiduri clare despre acte și proceduri și Ana, asistenta care îți răspunde
+              pe loc. Totul în română, gratuit.
             </p>
             <div className="mt-[30px] flex flex-wrap items-center gap-[13px]">
               <Link href="/asistent" className="btn btn-poppy">
@@ -31,40 +31,58 @@ export default function Home() {
               <a href="#ghiduri" className="btn btn-ghost">
                 Vezi ghidurile
               </a>
-              <div className="flex items-center gap-2.5 text-sm font-semibold text-soft">
-                <span className="flex">
-                  {[
-                    { l: "M", c: "bg-pine" },
-                    { l: "I", c: "bg-poppy" },
-                    { l: "D", c: "bg-honey" },
-                  ].map((d, i) => (
-                    <span
-                      key={d.l}
-                      className={`grid h-[30px] w-[30px] place-items-center rounded-full border-[2.5px] border-paper text-xs font-bold text-white ${d.c} ${
-                        i === 0 ? "" : "-ml-[9px]"
-                      }`}
-                    >
-                      {d.l}
-                    </span>
-                  ))}
-                </span>
-                ajutăm zilnic
-              </div>
             </div>
+            <ul className="mt-5 flex flex-wrap gap-x-5 gap-y-2 text-[13.5px] font-semibold text-soft">
+              {["Gratuit", "În română", "Surse oficiale"].map((chip) => (
+                <li key={chip} className="inline-flex items-center gap-1.5">
+                  <Check className="h-4 w-4 text-pine" />
+                  {chip}
+                </li>
+              ))}
+            </ul>
           </Reveal>
 
-          <Reveal className="relative h-[320px] min-[881px]:h-[440px]" delay={120}>
+          <Reveal className="relative h-[300px] min-[881px]:h-[440px]" delay={120}>
             <span className="absolute right-[8%] top-2 z-[3] rotate-[5deg] rounded-[14px] bg-ink px-4 py-[11px] font-display text-[13px] font-bold text-paper shadow-[0_10px_20px_-10px_rgba(0,0,0,0.4)]">
               în română
             </span>
-            <Placeholder
-              className="left-0 top-0 h-[74%] w-[62%] bg-[linear-gradient(150deg,#2c5544,#3d7059)]"
-              label="Foto: piață locală"
-            />
-            <Placeholder
-              className="bottom-0 right-0 h-[56%] w-[50%] bg-[linear-gradient(150deg,#e0502e,#e9a93c)]"
-              label="Foto: comunitate"
-            />
+
+            {/* Guides preview panel */}
+            <div className="absolute left-0 top-0 flex h-[74%] w-[62%] flex-col overflow-hidden rounded-[26px] bg-pine p-5 text-paper shadow-[0_24px_44px_-26px_rgba(60,40,20,0.45)]">
+              <span className="text-[11px] font-bold uppercase tracking-[0.06em] text-honey">
+                Ghiduri esențiale
+              </span>
+              <p className="mt-2.5 font-display text-[20px] font-bold leading-tight">
+                Pas cu pas, în limba ta.
+              </p>
+              <ul className="mt-auto flex flex-col gap-2.5">
+                {["Înregistrare & BSN", "Asigurare de sănătate", "Înregistrare ZZP (KVK)"].map(
+                  (g) => (
+                    <li key={g} className="flex items-center gap-2.5 text-[13.5px] font-semibold">
+                      <span className="grid h-5 w-5 flex-none place-items-center rounded-full bg-honey/25 text-honey">
+                        <Check className="h-3 w-3" />
+                      </span>
+                      {g}
+                    </li>
+                  )
+                )}
+              </ul>
+            </div>
+
+            {/* Ana preview panel */}
+            <div className="absolute bottom-0 right-0 flex h-[56%] w-[50%] flex-col justify-end overflow-hidden rounded-[26px] bg-[linear-gradient(150deg,#e0502e,#e9a93c)] p-5 shadow-[0_24px_44px_-26px_rgba(60,40,20,0.45)]">
+              <div className="flex items-center gap-2.5">
+                <span className="grid h-9 w-9 flex-none place-items-center rounded-full bg-white font-display text-[16px] font-extrabold text-poppy-d">
+                  A
+                </span>
+                <span className="text-[11px] font-bold uppercase tracking-[0.05em] text-white">
+                  Asistenta Ana
+                </span>
+              </div>
+              <div className="mt-3 self-start rounded-[14px_14px_14px_4px] bg-white px-3.5 py-2.5 text-[13px] font-medium leading-snug text-ink shadow-sm">
+                Salut! Cu ce te pot ajuta?
+              </div>
+            </div>
           </Reveal>
         </div>
       </section>
@@ -152,19 +170,6 @@ export default function Home() {
         </div>
       </section>
     </>
-  );
-}
-
-function Placeholder({ className, label }: { className: string; label: string }) {
-  return (
-    <div
-      className={`absolute overflow-hidden rounded-[26px] shadow-[0_24px_44px_-26px_rgba(60,40,20,0.45)] ${className}`}
-    >
-      <div className="absolute inset-0 bg-[linear-gradient(transparent_50%,rgba(0,0,0,0.42))]" />
-      <span className="absolute bottom-3 left-3 z-[2] text-[10.5px] font-bold uppercase tracking-[0.04em] text-white/90">
-        {label}
-      </span>
-    </div>
   );
 }
 

@@ -82,3 +82,28 @@ export function Store(props: IconProps) {
     </Svg>
   );
 }
+
+export function AlertTriangle(props: IconProps) {
+  return (
+    <Svg {...props}>
+      <path d="M10.3 3.3 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.3a2 2 0 0 0-3.4 0Z" />
+      <path d="M12 9v4M12 17h.01" />
+    </Svg>
+  );
+}
+
+export function Check(props: IconProps) {
+  return (
+    <Svg strokeWidth={2.5} {...props}>
+      <path d="M20 6 9 17l-5-5" />
+    </Svg>
+  );
+}
+
+export function ExternalLink(props: IconProps) {
+  return (
+    <Svg {...props}>
+      <path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+    </Svg>
+  );
+}
